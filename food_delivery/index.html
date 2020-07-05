@@ -16,13 +16,15 @@
 
     <link rel="stylesheet" href="static/css/styles.css">
 
+    <script src="static/js/main.js" defer></script>
+
     <title>Доставка еды</title>
 </head>
 
 <body>
 
     <section>
-        <nav class="navbar navbar-expand-lg fixed-top pb-5">
+        <nav class="navbar navbar-expand-lg pb-3">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <img class="img-fluid" src="static/img/logo2.png">
@@ -51,10 +53,8 @@
         </nav>
     </section>
 
-    <section class="py-5"></section>
-
-    <section class="d-flex justify-content-around align-items-center align-content-center">
-        <div id="carouselExampleCaptions" class="carousel slide pt-5 w-50" data-ride="carousel">
+    <section class="d-flex justify-content-around align-items-center align-content-center row mx-0">
+        <div id="carouselExampleCaptions" class="carousel slide col-md-7 px-0" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -94,7 +94,7 @@
         </div>
     </section>
 
-    <section class="w-75 container">
+    <section class="container">
         <div class="text-center py-5">
             <h2 class="pb-3">Служба доставки еды</h2>
             <div class="heading-line mx-auto"></div>
@@ -163,7 +163,7 @@
         </div>
     </section>
 
-    <section class="w-75 container">
+    <section class="container">
         <div class="text-center py-5">
             <h2 class="pb-3">Выбор предприятия общественного питания</h2>
             <div class="heading-line mx-auto"></div>
@@ -239,122 +239,273 @@
 
         <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
-              <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-              </li>
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
             </ul>
-          </nav>
+        </nav>
     </section>
 
-    <section class="w-75 container">
+    <section class="container">
         <div class="text-center py-5">
             <h2 class="pb-3">Меню</h2>
             <div class="heading-line mx-auto"></div>
         </div>
 
-        <div class="row row-cols-1 row-cols-md-3">
+        <div class="row row-cols-1 row-cols-md-3 justify-content-center">
             <div class="col mb-4">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
+                <div class="card h-100 text-center">
+                    <img src="static/img/temp.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                             additional content. This content is a little bit longer.</p>
                     </div>
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a short card.</p>
+                    <div class="container ">
+                        <div class="row justify-content-center pb-3">
+                            <div class="col-xs-3 col-xs-offset-3">
+                                <div class="input-group number-spinner">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" data-dir="dwn">-</button>
+                                    </span>
+                                    <input type="text" class="form-control text-center" value="1">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" data-dir="up">+</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col mb-4">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
+                <div class="card h-100 text-center">
+                    <img src="static/img/temp.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                             additional content. This content is a little bit longer.</p>
                     </div>
+                    <div class="container ">
+                        <div class="row justify-content-center pb-3">
+                            <div class="col-xs-3 col-xs-offset-3">
+                                <div class="input-group number-spinner">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" data-dir="dwn">-</button>
+                                    </span>
+                                    <input type="text" class="form-control text-center" value="1">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" data-dir="up">+</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col mb-4">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
+                <div class="card h-100 text-center">
+                    <img src="static/img/temp.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                             additional content. This content is a little bit longer.</p>
                     </div>
+                    <div class="container ">
+                        <div class="row justify-content-center pb-3">
+                            <div class="col-xs-3 col-xs-offset-3">
+                                <div class="input-group number-spinner">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" data-dir="dwn">-</button>
+                                    </span>
+                                    <input type="text" class="form-control text-center" value="1">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" data-dir="up">+</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col mb-4">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
+                <div class="card h-100 text-center">
+                    <img src="static/img/temp.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                             additional content. This content is a little bit longer.</p>
                     </div>
+                    <div class="container ">
+                        <div class="row justify-content-center pb-3">
+                            <div class="col-xs-3 col-xs-offset-3">
+                                <div class="input-group number-spinner">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" data-dir="dwn">-</button>
+                                    </span>
+                                    <input type="text" class="form-control text-center" value="1">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" data-dir="up">+</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col mb-4">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
+                <div class="card h-100 text-center">
+                    <img src="static/img/temp.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                             additional content. This content is a little bit longer.</p>
                     </div>
+                    <div class="container ">
+                        <div class="row justify-content-center pb-3">
+                            <div class="col-xs-3 col-xs-offset-3">
+                                <div class="input-group number-spinner">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" data-dir="dwn">-</button>
+                                    </span>
+                                    <input type="text" class="form-control text-center" value="1">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" data-dir="up">+</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col mb-4">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
+                <div class="card h-100 text-center">
+                    <img src="static/img/temp.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                             additional content. This content is a little bit longer.</p>
                     </div>
+                    <div class="container ">
+                        <div class="row justify-content-center pb-3">
+                            <div class="col-xs-3 col-xs-offset-3">
+                                <div class="input-group number-spinner">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" data-dir="dwn">-</button>
+                                    </span>
+                                    <input type="text" class="form-control text-center" value="1">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" data-dir="up">+</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col mb-4">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
+                <div class="card h-100 text-center">
+                    <img src="static/img/temp.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                             additional content. This content is a little bit longer.</p>
                     </div>
+                    <div class="container ">
+                        <div class="row justify-content-center pb-3">
+                            <div class="col-xs-3 col-xs-offset-3">
+                                <div class="input-group number-spinner">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" data-dir="dwn">-</button>
+                                    </span>
+                                    <input type="text" class="form-control text-center" value="1">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" data-dir="up">+</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col mb-4">
-                <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
+                <div class="card h-100 text-center">
+                    <img src="static/img/temp.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
                             additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="container ">
+                        <div class="row justify-content-center pb-3">
+                            <div class="col-xs-3 col-xs-offset-3">
+                                <div class="input-group number-spinner">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" data-dir="dwn">-</button>
+                                    </span>
+                                    <input type="text" class="form-control text-center" value="1">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" data-dir="up">+</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100 text-center">
+                    <img src="static/img/temp.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="container ">
+                        <div class="row justify-content-center pb-3">
+                            <div class="col-xs-3 col-xs-offset-3">
+                                <div class="input-group number-spinner">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" data-dir="dwn">-</button>
+                                    </span>
+                                    <input type="text" class="form-control text-center" value="1">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" data-dir="up">+</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100 text-center">
+                    <img src="static/img/temp.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="container ">
+                        <div class="row justify-content-center pb-3">
+                            <div class="col-xs-3 col-xs-offset-3">
+                                <div class="input-group number-spinner">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" data-dir="dwn">-</button>
+                                    </span>
+                                    <input type="text" class="form-control text-center" value="1">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" data-dir="up">+</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -362,7 +513,7 @@
 
     </section>
 
-    <section class="w-75 container">
+    <section class="container">
         <div class="text-center py-5">
             <h2 class="pb-3">Дополнительные опции</h2>
             <div class="heading-line mx-auto"></div>
@@ -371,15 +522,15 @@
         <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
             <label class="form-check-label" for="defaultCheck1">
-              Являюсь студентом ВУЗа
+                Являюсь студентом ВУЗа
             </label>
-          </div>
-          <div class="form-check">
+        </div>
+        <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
             <label class="form-check-label" for="defaultCheck2">
-              Быстрая доставка
+                Быстрая доставка
             </label>
-          </div>
+        </div>
 
         <button type="button" name="" id="" class="btn btn-primary" btn-lg btn-block">Оформить заказ</button>
     </section>
