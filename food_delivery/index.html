@@ -51,9 +51,10 @@
                 </div>
             </div>
         </nav>
+        <div class="heading-line mx-auto"></div>
     </section>
 
-    <section class="d-flex justify-content-around align-items-center align-content-center row mx-0">
+    <section class="d-flex justify-content-around align-items-center align-content-center row mx-0 pt-5">
         <div id="carouselExampleCaptions" class="carousel slide col-md-7 px-0" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -164,13 +165,13 @@
         </div>
     </section>
 
-    <section class="container">
-        <div class="text-center py-5">
+    <section class="row justify-content-center mx-0">
+        <div class="text-center py-5 col-md-7">
             <h2 class="pb-3">Выбор предприятия общественного питания</h2>
             <div class="heading-line mx-auto"></div>
         </div>
 
-        <form>
+        <form class="col-md-7">
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputState">Административный округ</label>
@@ -207,50 +208,57 @@
             </div>
         </form>
 
-        <table class="table py-5">
-            <thead>
-                <tr>
-                    <th scope="col">Название</th>
-                    <th scope="col">Тип</th>
-                    <th scope="col">Адрес</th>
-                    <th scope="col">Действия</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">Столовая МТУСИ</th>
-                    <td>Столовая</td>
-                    <td>город Москва, Авиамоторная улица, дом 8, строение 1</td>
-                    <td><button type="submit" class="btn btn-primary align-self-center ml-auto">Выбрать</button></td>
-                </tr>
-                <tr>
-                    <th scope="row">Рыба и мясо на углях</th>
-                    <td>Кафе</td>
-                    <td>город Москва, проспект Андропова, дом 35А</td>
-                    <td><button type="submit" class="btn btn-primary align-self-center ml-auto">Выбрать</button></td>
-                </tr>
-                <tr>
-                    <th scope="row">...</th>
-                    <td>...</td>
-                    <td>...</td>
-                    <td><button type="submit" class="btn btn-primary align-self-center ml-auto">Выбрать</button></td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="col-md-7 pt-5">
+            <table class="table py-5">
+                <thead>
+                    <tr>
+                        <th scope="col">Название</th>
+                        <th scope="col">Тип</th>
+                        <th scope="col">Адрес</th>
+                        <th scope="col">Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Столовая МТУСИ</th>
+                        <td>Столовая</td>
+                        <td>город Москва, Авиамоторная улица, дом 8, строение 1</td>
+                        <td><button type="submit" class="btn btn-primary align-self-center ml-auto">Выбрать</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Рыба и мясо на углях</th>
+                        <td>Кафе</td>
+                        <td>город Москва, проспект Андропова, дом 35А</td>
+                        <td><button type="submit" class="btn btn-primary align-self-center ml-auto">Выбрать</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">...</th>
+                        <td>...</td>
+                        <td>...</td>
+                        <td><button type="submit" class="btn btn-primary align-self-center ml-auto">Выбрать</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-        <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-                <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#">Next</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="col-md-7">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </section>
 
     <section class="container">
@@ -275,7 +283,7 @@
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" data-dir="dwn">-</button>
                                     </span>
-                                    <input type="text" class="form-control text-center" value="1">
+                                    <input type="text" class="form-control text-center" value="0">
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" data-dir="up">+</button>
                                     </span>
@@ -300,7 +308,7 @@
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" data-dir="dwn">-</button>
                                     </span>
-                                    <input type="text" class="form-control text-center" value="1">
+                                    <input type="text" class="form-control text-center" value="0">
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" data-dir="up">+</button>
                                     </span>
@@ -325,7 +333,7 @@
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" data-dir="dwn">-</button>
                                     </span>
-                                    <input type="text" class="form-control text-center" value="1">
+                                    <input type="text" class="form-control text-center" value="0">
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" data-dir="up">+</button>
                                     </span>
@@ -350,7 +358,7 @@
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" data-dir="dwn">-</button>
                                     </span>
-                                    <input type="text" class="form-control text-center" value="1">
+                                    <input type="text" class="form-control text-center" value="0">
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" data-dir="up">+</button>
                                     </span>
@@ -375,7 +383,7 @@
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" data-dir="dwn">-</button>
                                     </span>
-                                    <input type="text" class="form-control text-center" value="1">
+                                    <input type="text" class="form-control text-center" value="0">
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" data-dir="up">+</button>
                                     </span>
@@ -400,7 +408,7 @@
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" data-dir="dwn">-</button>
                                     </span>
-                                    <input type="text" class="form-control text-center" value="1">
+                                    <input type="text" class="form-control text-center" value="0">
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" data-dir="up">+</button>
                                     </span>
@@ -425,7 +433,7 @@
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" data-dir="dwn">-</button>
                                     </span>
-                                    <input type="text" class="form-control text-center" value="1">
+                                    <input type="text" class="form-control text-center" value="0">
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" data-dir="up">+</button>
                                     </span>
@@ -450,7 +458,7 @@
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" data-dir="dwn">-</button>
                                     </span>
-                                    <input type="text" class="form-control text-center" value="1">
+                                    <input type="text" class="form-control text-center" value="0">
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" data-dir="up">+</button>
                                     </span>
@@ -475,7 +483,7 @@
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" data-dir="dwn">-</button>
                                     </span>
-                                    <input type="text" class="form-control text-center" value="1">
+                                    <input type="text" class="form-control text-center" value="0">
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" data-dir="up">+</button>
                                     </span>
@@ -500,7 +508,7 @@
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" data-dir="dwn">-</button>
                                     </span>
-                                    <input type="text" class="form-control text-center" value="1">
+                                    <input type="text" class="form-control text-center" value="0">
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" data-dir="up">+</button>
                                     </span>
@@ -533,10 +541,11 @@
             </label>
         </div>
 
-        <button type="button" name="" id="" class="btn btn-primary" btn-lg btn-block">Оформить заказ</button>
+        <button type="button" name="" id="" class="btn btn-primary" btn-lg btn-block>Оформить заказ</button>
     </section>
 
-    <footer class="footer">
+    <footer class="footer pt-5">
+        <div class="heading-line mx-auto"></div>
         <div class="text-center py-3">
             <a href="#">
                 <img src="static/img/logo3.png" alt="">
