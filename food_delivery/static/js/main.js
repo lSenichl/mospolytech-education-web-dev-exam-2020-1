@@ -101,7 +101,7 @@ window.onload = function () {
     request4.onload = () => getTable(JSON.parse(request4.response));
     request4.send();
 
-    btnTable.onclick = function() {
+    btnTable.onclick = function () {
         document.getElementById("data").innerHTML = ''
         const apilink = `http://exam-2020-1-api.std-900.ist.mospolytech.ru/api/data1`;
         const request4 = new XMLHttpRequest();
@@ -109,5 +109,5 @@ window.onload = function () {
         setTimeout(request4.onload = () => getTable(JSON.parse(request3.response)), 1000);
         request4.send();
     }
-    
+
 }
