@@ -60,21 +60,54 @@ function getTypeObject(data) {
     });
 }
 
+function getTable(data) {
+    console.log(data);
+    if (data.length > 0) {
+        var temp = "";
+
+        data.forEach((u) => {
+            temp += "<tr>";
+            temp += "<td>" + u.name + "</td>";
+            temp += "<td>" + u.typeObject + "</td>";
+            temp += "<td>" + u.address + "</td>";
+            temp += `<td><button type=\"submit\" class=\"btn btn-primary\" id=\`${u.id}\`>Выбрать</button></td>`;
+        })
+
+        document.getElementById("data").innerHTML = temp;
+    }
+}
+
 window.onload = function () {
     const apilink = `http://exam-2020-1-api.std-900.ist.mospolytech.ru/api/data1`;
     const request = new XMLHttpRequest();
     const request2 = new XMLHttpRequest();
     const request3 = new XMLHttpRequest();
+    const request4 = new XMLHttpRequest();
+
     request.open('GET', apilink);
     request2.open('GET', apilink);
     request3.open('GET', apilink);
+    request4.open('GET', apilink);
 
     request.onload = () => getDistrict(JSON.parse(request.response));
     request.send();
 
     request2.onload = () => getAdmArea(JSON.parse(request2.response));
     request2.send();
-    
+
     request3.onload = () => getTypeObject(JSON.parse(request3.response));
     request3.send();
+
+    request4.onload = () => getTable(JSON.parse(request4.response));
+    request4.send();
+
+    btnTable.onclick = function() {
+        document.getElementById("data").innerHTML = ''
+        const apilink = `http://exam-2020-1-api.std-900.ist.mospolytech.ru/api/data1`;
+        const request4 = new XMLHttpRequest();
+        request4.open('GET', apilink);
+        setTimeout(request4.onload = () => getTable(JSON.parse(request3.response)), 1000);
+        request4.send();
+    }
+    
 }
