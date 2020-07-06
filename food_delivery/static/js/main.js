@@ -1,4 +1,5 @@
 $(document).on('click', '.number-spinner button', function () {
+
     var btn = $(this),
         oldValue = btn.closest('.number-spinner').find('input').val().trim(),
         newVal = 0;
@@ -13,6 +14,54 @@ $(document).on('click', '.number-spinner button', function () {
         }
     }
     btn.closest('.number-spinner').find('input').val(newVal);
+});
+
+let priceArr = [0,0,0,0,0,0,0,0,0,0];
+
+$(document).on('click', '.number-spinner button', function () {
+    let m1 = document.getElementById('m1').textContent;
+    let m2 = document.getElementById('m2').textContent;
+    let m3 = document.getElementById('m3').textContent;
+    let m4 = document.getElementById('m4').textContent;
+    let m5 = document.getElementById('m5').textContent;
+    let m6 = document.getElementById('m6').textContent;
+    let m7 = document.getElementById('m7').textContent;
+    let m8 = document.getElementById('m8').textContent;
+    let m9 = document.getElementById('m9').textContent;
+    let m10 = document.getElementById('m10').textContent;
+
+    let pm1 = document.getElementById('countM1').value;
+    let pm2 = document.getElementById('countM2').value;
+    let pm3 = document.getElementById('countM3').value;
+    let pm4 = document.getElementById('countM4').value;
+    let pm5 = document.getElementById('countM5').value;
+    let pm6 = document.getElementById('countM6').value;
+    let pm7 = document.getElementById('countM7').value;
+    let pm8 = document.getElementById('countM8').value;
+    let pm9 = document.getElementById('countM9').value;
+    let pm10 = document.getElementById('countM10').value;
+
+    priceArr[0] = m1 * pm1;
+    priceArr[1] = m2 * pm2;
+    priceArr[2] = m3 * pm3;
+    priceArr[3] = m4 * pm4;
+    priceArr[4] = m5 * pm5;
+    priceArr[5] = m6 * pm6;
+    priceArr[6] = m7 * pm7;
+    priceArr[7] = m8 * pm8;
+    priceArr[8] = m9 * pm9;
+    priceArr[9] = m10 * pm10;
+
+    console.log(priceArr);
+
+    let finalPriceArr = 0;
+
+    for (let index = 0; index < 10; index++) {
+        finalPriceArr += priceArr[index];
+    }
+
+    let finalPrice = document.getElementById('finalPrice');
+    finalPrice.innerText = finalPriceArr;
 });
 
 function getAdmArea(data) {
