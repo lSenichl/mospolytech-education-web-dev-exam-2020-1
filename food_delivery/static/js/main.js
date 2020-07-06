@@ -16,7 +16,7 @@ $(document).on('click', '.number-spinner button', function () {
     btn.closest('.number-spinner').find('input').val(newVal);
 });
 
-let priceArr = [0,0,0,0,0,0,0,0,0,0];
+let priceArr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 $(document).on('click', '.number-spinner button', function () {
     let m1 = document.getElementById('m1').textContent;
@@ -61,7 +61,9 @@ $(document).on('click', '.number-spinner button', function () {
     }
 
     let finalPrice = document.getElementById('finalPrice');
+    let finalMosalPrice = document.getElementById('finalModalPrice');
     finalPrice.innerText = finalPriceArr;
+    finalMosalPrice.innerText = finalPriceArr;
 });
 
 function getAdmArea(data) {
@@ -148,7 +150,7 @@ function getTable(data, page) {
 function clickHandler(event) {
     let target = event.target;
     if (target.tagName != 'BUTTON') return;
-    
+
     let menu1 = document.getElementById('m1');
     let menu2 = document.getElementById('m2');
     let menu3 = document.getElementById('m3');
@@ -162,12 +164,12 @@ function clickHandler(event) {
 
     const apilink = `http://exam-2020-1-api.std-900.ist.mospolytech.ru/api/data1/`;
     const request = new XMLHttpRequest();
-    request.open('GET', apilink+`${target.id}`);
+    request.open('GET', apilink + `${target.id}`);
 
     if (target.id != '') {
         console.log(target.id);
         request.onload = reqListener;
-        function reqListener () {
+        function reqListener() {
             menu1.innerText = JSON.parse(request.response).set_1;
             menu2.innerText = JSON.parse(request.response).set_2;
             menu3.innerText = JSON.parse(request.response).set_3;
@@ -178,7 +180,7 @@ function clickHandler(event) {
             menu8.innerText = JSON.parse(request.response).set_8;
             menu9.innerText = JSON.parse(request.response).set_9;
             menu10.innerText = JSON.parse(request.response).set_10;
-          }
+        }
         request.send();
     }
 }
