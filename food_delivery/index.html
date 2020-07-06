@@ -568,7 +568,7 @@
                 <h3 class="mx-5">Итого: <span id="finalPrice">0</span> Р</h3>
 
                 <button type="button" class="btn btn-dark mx-5 m-1 btn-lg" data-toggle="modal"
-                    data-target="#exampleModal" data-whatever="@mdo" id="confirmToModalBtn">Оформить заказ</button>
+                    data-target="#exampleModal" data-whatever="@mdo" id="confirmToModalBtn" disabled>Оформить заказ</button>
 
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                     aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -676,13 +676,17 @@
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-dark" data-dismiss="modal">Отмена</button>
                                 <button type="button" class="btn btn-dark" id="btnconfirm"
-                                    data-dismiss="modal">Подтвердить</button>
+                                    data-dismiss="modal" disabled>Подтвердить</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+    </div>
+
+    <div class="row justify-content-center pt-2">
+        <div id="notification" class="col-md-6 text-center"></div>
     </div>
 
     <footer class="footer mt-5">

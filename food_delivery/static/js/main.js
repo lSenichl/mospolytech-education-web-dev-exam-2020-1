@@ -315,6 +315,11 @@ function clickHandler(event) {
             modalRate.innerText = JSON.parse(request.response).rate;
         }
         request.send();
+
+        let btnConf = document.getElementById('btnconfirm');
+        btnConf.disabled = false;
+        let btnConf2 = document.getElementById('confirmToModalBtn');
+        btnConf2.disabled = false;
     }
 }
 
@@ -437,8 +442,13 @@ window.onload = function () {
     })
 
     btnconfirm.onclick = function () {
-        if (document.getElementById('finalModalPrice' != 0)) {
-            alert('Заказ успешно отправлен!');
+        if (document.getElementById('finalModalPrice').textContent != 0) {
+            let not = document.getElementById('notification');
+            not.innerHTML = "<div class=\"alert alert-success\" role=\"alert\">Ваш заказ принят!</div>";
+            console.log('Заказ успешно отправлен!');
+            setTimeout(function () {
+                not.innerHTML = '';
+            }, 2500);
         }
     }
 
