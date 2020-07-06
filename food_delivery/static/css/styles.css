@@ -45,3 +45,8 @@ footer {
     font-weight: bold;
     font-size: larger;
 }
+
+.card img {
+    height: 300px;
+    max-height: 300px;
+}

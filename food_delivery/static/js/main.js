@@ -82,8 +82,8 @@ $(document).on('click', '.number-spinner button', function () {
     if (priceArr[0] != 0) {
         var temp = "";
 
-        temp += "<td style=\"width: 25%\">" + "<img src=\"static/img/temp.png\" class=\"img-fluid\">" + "</td>";
-        temp += "<td style=\"width: 25%\">" + "<strong>Первое блюдо</strong>" + "</td>";
+        temp += "<td style=\"width: 25%\">" + "<img src=\"static/img/b87bb973.jpg\" class=\"img-fluid\">" + "</td>";
+        temp += "<td style=\"width: 25%\">" + "<strong>Плов</strong>" + "</td>";
         temp += "<td style=\"width: 25%\">" + `${pm1}` + " X " + `${m1}` + " Р" + "</td>";
         temp += "<td style=\"width: 25%\"><strong>" + `${priceArr[0]}` + " Р" + "</strong></td>";
 
@@ -92,8 +92,8 @@ $(document).on('click', '.number-spinner button', function () {
     if (priceArr[1] != 0) {
         var temp2 = "";
 
-        temp2 += "<td style=\"width: 25%\">" + "<img src=\"static/img/temp.png\" class=\"img-fluid\">" + "</td>";
-        temp2 += "<td style=\"width: 25%\">" + "<strong>Второе блюдо</strong>" + "</td>";
+        temp2 += "<td style=\"width: 25%\">" + "<img src=\"static/img/samii_vkusnii_borsh-404089.jpg\" class=\"img-fluid\">" + "</td>";
+        temp2 += "<td style=\"width: 25%\">" + "<strong>Борщ</strong>" + "</td>";
         temp2 += "<td style=\"width: 25%\">" + `${pm2}` + " X " + `${m2}` + " Р" + "</td>";
         temp2 += "<td style=\"width: 25%\"><strong>" + `${priceArr[1]}` + " Р" + "</strong></td>";
 
@@ -102,8 +102,8 @@ $(document).on('click', '.number-spinner button', function () {
     if (priceArr[2] != 0) {
         var temp3 = "";
 
-        temp3 += "<td style=\"width: 25%\">" + "<img src=\"static/img/temp.png\" class=\"img-fluid\">" + "</td>";
-        temp3 += "<td style=\"width: 25%\">" + "<strong>Третье блюдо</strong>" + "</td>";
+        temp3 += "<td style=\"width: 25%\">" + "<img src=\"static/img/draniki-iz-kartoshki-foto-1-570x368.jpg\" class=\"img-fluid\">" + "</td>";
+        temp3 += "<td style=\"width: 25%\">" + "<strong>Драники</strong>" + "</td>";
         temp3 += "<td style=\"width: 25%\">" + `${pm3}` + " X " + `${m3}` + " Р" + "</td>";
         temp3 += "<td style=\"width: 25%\"><strong>" + `${priceArr[2]}` + " Р" + "</strong></td>";
 
@@ -112,8 +112,8 @@ $(document).on('click', '.number-spinner button', function () {
     if (priceArr[3] != 0) {
         var temp4 = "";
 
-        temp4 += "<td style=\"width: 25%\">" + "<img src=\"static/img/temp.png\" class=\"img-fluid\">" + "</td>";
-        temp4 += "<td style=\"width: 25%\">" + "<strong>Четвёртое блюдо</strong>" + "</td>";
+        temp4 += "<td style=\"width: 25%\">" + "<img src=\"static/img/Pasta_1523360590.jpg\" class=\"img-fluid\">" + "</td>";
+        temp4 += "<td style=\"width: 25%\">" + "<strong>Паста</strong>" + "</td>";
         temp4 += "<td style=\"width: 25%\">" + `${pm4}` + " X " + `${m4}` + " Р" + "</td>";
         temp4 += "<td style=\"width: 25%\"><strong>" + `${priceArr[3]}` + " Р" + "</strong></td>";
 
@@ -123,8 +123,8 @@ $(document).on('click', '.number-spinner button', function () {
     if (priceArr[4] != 0) {
         var temp5 = "";
 
-        temp5 += "<td style=\"width: 25%\">" + "<img src=\"static/img/temp.png\" class=\"img-fluid\">" + "</td>";
-        temp5 += "<td style=\"width: 25%\">" + "<strong>Пятое блюдо</strong>" + "</td>";
+        temp5 += "<td style=\"width: 25%\">" + "<img src=\"static/img/300x233_0_f907946fe6809e00caed3d759703d609@2000x1500_0xc0a839a2_7163011741494799525.jpeg\" class=\"img-fluid\">" + "</td>";
+        temp5 += "<td style=\"width: 25%\">" + "<strong>Бефстроганов</strong>" + "</td>";
         temp5 += "<td style=\"width: 25%\">" + `${pm5}` + " X " + `${m5}` + " Р" + "</td>";
         temp5 += "<td style=\"width: 25%\"><strong>" + `${priceArr[4]}` + " Р" + "</strong></td>";
 
@@ -134,8 +134,8 @@ $(document).on('click', '.number-spinner button', function () {
     if (priceArr[5] != 0) {
         var temp6 = "";
 
-        temp6 += "<td style=\"width: 25%\">" + "<img src=\"static/img/temp.png\" class=\"img-fluid\">" + "</td>";
-        temp6 += "<td style=\"width: 25%\">" + "<strong>Шестое блюдо</strong>" + "</td>";
+        temp6 += "<td style=\"width: 25%\">" + "<img src=\"static/img/hachapuri-1.jpg\" class=\"img-fluid\">" + "</td>";
+        temp6 += "<td style=\"width: 25%\">" + "<strong>Хачапури</strong>" + "</td>";
         temp6 += "<td style=\"width: 25%\">" + `${pm6}` + " X " + `${m6}` + " Р" + "</td>";
         temp6 += "<td style=\"width: 25%\"><strong>" + `${priceArr[5]}` + " Р" + "</strong></td>";
 
@@ -145,8 +145,8 @@ $(document).on('click', '.number-spinner button', function () {
     if (priceArr[6] != 0) {
         var temp7 = "";
 
-        temp7 += "<td style=\"width: 25%\">" + "<img src=\"static/img/temp.png\" class=\"img-fluid\">" + "</td>";
-        temp7 += "<td style=\"width: 25%\">" + "<strong>Седьмое блюдо</strong>" + "</td>";
+        temp7 += "<td style=\"width: 25%\">" + "<img src=\"static/img/primebeefdenversteak_500_306_5_100.png\" class=\"img-fluid\">" + "</td>";
+        temp7 += "<td style=\"width: 25%\">" + "<strong>Стейк</strong>" + "</td>";
         temp7 += "<td style=\"width: 25%\">" + `${pm7}` + " X " + `${m7}` + " Р" + "</td>";
         temp7 += "<td style=\"width: 25%\"><strong>" + `${priceArr[6]}` + " Р" + "</strong></td>";
 
@@ -156,8 +156,8 @@ $(document).on('click', '.number-spinner button', function () {
     if (priceArr[7] != 0) {
         var temp8 = "";
 
-        temp8 += "<td style=\"width: 25%\">" + "<img src=\"static/img/temp.png\" class=\"img-fluid\">" + "</td>";
-        temp8 += "<td style=\"width: 25%\">" + "<strong>Восьмое блюдо</strong>" + "</td>";
+        temp8 += "<td style=\"width: 25%\">" + "<img src=\"static/img/fila_new.jpg\" class=\"img-fluid\">" + "</td>";
+        temp8 += "<td style=\"width: 25%\">" + "<strong>Филадельфия</strong>" + "</td>";
         temp8 += "<td style=\"width: 25%\">" + `${pm8}` + " X " + `${m8}` + " Р" + "</td>";
         temp8 += "<td style=\"width: 25%\"><strong>" + `${priceArr[7]}` + " Р" + "</strong></td>";
 
@@ -167,8 +167,8 @@ $(document).on('click', '.number-spinner button', function () {
     if (priceArr[8] != 0) {
         var temp9 = "";
 
-        temp9 += "<td style=\"width: 25%\">" + "<img src=\"static/img/temp.png\" class=\"img-fluid\">" + "</td>";
-        temp9 += "<td style=\"width: 25%\">" + "<strong>Девятое блюдо</strong>" + "</td>";
+        temp9 += "<td style=\"width: 25%\">" + "<img src=\"static/img/300x233_0_86f0e15b2ff49738d2d1e237fd2e049b@2123x1412_0xc0a839a2_7142987081498078867.jpeg\" class=\"img-fluid\">" + "</td>";
+        temp9 += "<td style=\"width: 25%\">" + "<strong>Омлет</strong>" + "</td>";
         temp9 += "<td style=\"width: 25%\">" + `${pm9}` + " X " + `${m9}` + " Р" + "</td>";
         temp9 += "<td style=\"width: 25%\"><strong>" + `${priceArr[8]}` + " Р" + "</strong></td>";
 
@@ -177,8 +177,8 @@ $(document).on('click', '.number-spinner button', function () {
     if (priceArr[9] != 0) {
         var temp10 = "";
 
-        temp10 += "<td style=\"width: 25%\">" + "<img src=\"static/img/temp.png\" class=\"img-fluid\">" + "</td>";
-        temp10 += "<td style=\"width: 25%\">" + "<strong>Десятое блюдо</strong>" + "</td>";
+        temp10 += "<td style=\"width: 25%\">" + "<img src=\"static/img/unnamed.jpg\" class=\"img-fluid\">" + "</td>";
+        temp10 += "<td style=\"width: 25%\">" + "<strong>Шашлык</strong>" + "</td>";
         temp10 += "<td style=\"width: 25%\">" + `${pm10}` + " X " + `${m10}` + " Р" + "</td>";
         temp10 += "<td style=\"width: 25%\"><strong>" + `${priceArr[9]}` + " Р" + "</strong></td>";
 
