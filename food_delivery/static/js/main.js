@@ -18,6 +18,8 @@ $(document).on('click', '.number-spinner button', function () {
 
 let priceArr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
+let finPr;
+
 $(document).on('click', '.number-spinner button', function () {
     let m1 = document.getElementById('m1').textContent;
     let m2 = document.getElementById('m2').textContent;
@@ -64,6 +66,125 @@ $(document).on('click', '.number-spinner button', function () {
     let finalMosalPrice = document.getElementById('finalModalPrice');
     finalPrice.innerText = finalPriceArr;
     finalMosalPrice.innerText = finalPriceArr;
+    finPr = finalPriceArr;
+
+    document.getElementById("t1").innerHTML = '';
+    document.getElementById("t2").innerHTML = '';
+    document.getElementById("t3").innerHTML = '';
+    document.getElementById("t4").innerHTML = '';
+    document.getElementById("t5").innerHTML = '';
+    document.getElementById("t6").innerHTML = '';
+    document.getElementById("t7").innerHTML = '';
+    document.getElementById("t8").innerHTML = '';
+    document.getElementById("t9").innerHTML = '';
+    document.getElementById("t10").innerHTML = '';
+
+    if (priceArr[0] != 0) {
+        var temp = "";
+
+        temp += "<td style=\"width: 25%\">" + "<img src=\"static/img/temp.png\" class=\"img-fluid\">" + "</td>";
+        temp += "<td style=\"width: 25%\">" + "<strong>Первое блюдо</strong>" + "</td>";
+        temp += "<td style=\"width: 25%\">" + `${pm1}` + " X " + `${m1}` + " Р" + "</td>";
+        temp += "<td style=\"width: 25%\"><strong>" + `${priceArr[0]}` + " Р" + "</strong></td>";
+
+        document.getElementById("t1").innerHTML = temp;
+    }
+    if (priceArr[1] != 0) {
+        var temp2 = "";
+
+        temp2 += "<td style=\"width: 25%\">" + "<img src=\"static/img/temp.png\" class=\"img-fluid\">" + "</td>";
+        temp2 += "<td style=\"width: 25%\">" + "<strong>Второе блюдо</strong>" + "</td>";
+        temp2 += "<td style=\"width: 25%\">" + `${pm2}` + " X " + `${m2}` + " Р" + "</td>";
+        temp2 += "<td style=\"width: 25%\"><strong>" + `${priceArr[1]}` + " Р" + "</strong></td>";
+
+        document.getElementById("t2").innerHTML = temp2;
+    }
+    if (priceArr[2] != 0) {
+        var temp3 = "";
+
+        temp3 += "<td style=\"width: 25%\">" + "<img src=\"static/img/temp.png\" class=\"img-fluid\">" + "</td>";
+        temp3 += "<td style=\"width: 25%\">" + "<strong>Третье блюдо</strong>" + "</td>";
+        temp3 += "<td style=\"width: 25%\">" + `${pm3}` + " X " + `${m3}` + " Р" + "</td>";
+        temp3 += "<td style=\"width: 25%\"><strong>" + `${priceArr[2]}` + " Р" + "</strong></td>";
+
+        document.getElementById("t3").innerHTML = temp3;
+    }
+    if (priceArr[3] != 0) {
+        var temp4 = "";
+
+        temp4 += "<td style=\"width: 25%\">" + "<img src=\"static/img/temp.png\" class=\"img-fluid\">" + "</td>";
+        temp4 += "<td style=\"width: 25%\">" + "<strong>Четвёртое блюдо</strong>" + "</td>";
+        temp4 += "<td style=\"width: 25%\">" + `${pm4}` + " X " + `${m4}` + " Р" + "</td>";
+        temp4 += "<td style=\"width: 25%\"><strong>" + `${priceArr[3]}` + " Р" + "</strong></td>";
+
+
+        document.getElementById("t4").innerHTML = temp4;
+    }
+    if (priceArr[4] != 0) {
+        var temp5 = "";
+
+        temp5 += "<td style=\"width: 25%\">" + "<img src=\"static/img/temp.png\" class=\"img-fluid\">" + "</td>";
+        temp5 += "<td style=\"width: 25%\">" + "<strong>Пятое блюдо</strong>" + "</td>";
+        temp5 += "<td style=\"width: 25%\">" + `${pm5}` + " X " + `${m5}` + " Р" + "</td>";
+        temp5 += "<td style=\"width: 25%\"><strong>" + `${priceArr[4]}` + " Р" + "</strong></td>";
+
+
+        document.getElementById("t5").innerHTML = temp5;
+    }
+    if (priceArr[5] != 0) {
+        var temp6 = "";
+
+        temp6 += "<td style=\"width: 25%\">" + "<img src=\"static/img/temp.png\" class=\"img-fluid\">" + "</td>";
+        temp6 += "<td style=\"width: 25%\">" + "<strong>Шестое блюдо</strong>" + "</td>";
+        temp6 += "<td style=\"width: 25%\">" + `${pm6}` + " X " + `${m6}` + " Р" + "</td>";
+        temp6 += "<td style=\"width: 25%\"><strong>" + `${priceArr[5]}` + " Р" + "</strong></td>";
+
+
+        document.getElementById("t6").innerHTML = temp6;
+    }
+    if (priceArr[6] != 0) {
+        var temp7 = "";
+
+        temp7 += "<td style=\"width: 25%\">" + "<img src=\"static/img/temp.png\" class=\"img-fluid\">" + "</td>";
+        temp7 += "<td style=\"width: 25%\">" + "<strong>Седьмое блюдо</strong>" + "</td>";
+        temp7 += "<td style=\"width: 25%\">" + `${pm7}` + " X " + `${m7}` + " Р" + "</td>";
+        temp7 += "<td style=\"width: 25%\"><strong>" + `${priceArr[6]}` + " Р" + "</strong></td>";
+
+
+        document.getElementById("t7").innerHTML = temp7;
+    }
+    if (priceArr[7] != 0) {
+        var temp8 = "";
+
+        temp8 += "<td style=\"width: 25%\">" + "<img src=\"static/img/temp.png\" class=\"img-fluid\">" + "</td>";
+        temp8 += "<td style=\"width: 25%\">" + "<strong>Восьмое блюдо</strong>" + "</td>";
+        temp8 += "<td style=\"width: 25%\">" + `${pm8}` + " X " + `${m8}` + " Р" + "</td>";
+        temp8 += "<td style=\"width: 25%\"><strong>" + `${priceArr[7]}` + " Р" + "</strong></td>";
+
+
+        document.getElementById("t8").innerHTML = temp8;
+    }
+    if (priceArr[8] != 0) {
+        var temp9 = "";
+
+        temp9 += "<td style=\"width: 25%\">" + "<img src=\"static/img/temp.png\" class=\"img-fluid\">" + "</td>";
+        temp9 += "<td style=\"width: 25%\">" + "<strong>Девятое блюдо</strong>" + "</td>";
+        temp9 += "<td style=\"width: 25%\">" + `${pm9}` + " X " + `${m9}` + " Р" + "</td>";
+        temp9 += "<td style=\"width: 25%\"><strong>" + `${priceArr[8]}` + " Р" + "</strong></td>";
+
+        document.getElementById("t9").innerHTML = temp9;
+    }
+    if (priceArr[9] != 0) {
+        var temp10 = "";
+
+        temp10 += "<td style=\"width: 25%\">" + "<img src=\"static/img/temp.png\" class=\"img-fluid\">" + "</td>";
+        temp10 += "<td style=\"width: 25%\">" + "<strong>Десятое блюдо</strong>" + "</td>";
+        temp10 += "<td style=\"width: 25%\">" + `${pm10}` + " X " + `${m10}` + " Р" + "</td>";
+        temp10 += "<td style=\"width: 25%\"><strong>" + `${priceArr[9]}` + " Р" + "</strong></td>";
+
+
+        document.getElementById("t10").innerHTML = temp10;
+    }
 });
 
 function getAdmArea(data) {
@@ -282,6 +403,43 @@ window.onload = function () {
             return result;
         }), 0), 1000);
         request4.send();
+    }
+
+    $('#defaultCheck1').on('click', function () {
+        if ($(this).is(':checked')) {
+            let finalMosalPrice = document.getElementById('finalModalPrice');
+            finalMosalPrice.innerText = Math.round(finPr * 1.4);
+            var tempo1 = "";
+
+            tempo1 += "<td style=\"width: 50%\">" + "<strong>В два раза больше:</strong>" + "</td>";
+            tempo1 += "<td style=\"width: 50%\">" + "Сеты X2, Цена -60%" + "</td>";
+
+            document.getElementById("to1").innerHTML = tempo1;
+        } else {
+            document.getElementById("to1").innerHTML = '';
+            let finalMosalPrice = document.getElementById('finalModalPrice');
+            finalMosalPrice.innerText = finPr;
+        }
+    })
+
+    $('#defaultCheck2').on('click', function () {
+        if ($(this).is(':checked')) {
+            var tempo2 = "";
+
+            let finalMosalPrice = document.getElementById('finalModalPrice');
+            tempo2 += "<td style=\"width: 50%\">" + "<strong>Только горячим:</strong>" + "</td>";
+            tempo2 += "<td style=\"width: 50%\">" + "Если заказ приедет холодным то он будет Вам стоить " + `${Math.round(Number(finalMosalPrice.textContent) * 0.7)}` + " Р" + "</td>";
+
+            document.getElementById("to2").innerHTML = tempo2;
+        } else {
+            document.getElementById("to2").innerHTML = '';
+        }
+    })
+
+    btnconfirm.onclick = function () {
+        if (document.getElementById('finalModalPrice' != 0)) {
+            alert('Заказ успешно отправлен!');
+        }
     }
 
     let tbl = document.getElementById('restTable');
