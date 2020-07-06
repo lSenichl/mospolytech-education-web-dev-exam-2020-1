@@ -96,6 +96,44 @@ function getTable(data, page) {
     }
 }
 
+function clickHandler(event) {
+    let target = event.target;
+    if (target.tagName != 'BUTTON') return;
+    
+    let menu1 = document.getElementById('m1');
+    let menu2 = document.getElementById('m2');
+    let menu3 = document.getElementById('m3');
+    let menu4 = document.getElementById('m4');
+    let menu5 = document.getElementById('m5');
+    let menu6 = document.getElementById('m6');
+    let menu7 = document.getElementById('m7');
+    let menu8 = document.getElementById('m8');
+    let menu9 = document.getElementById('m9');
+    let menu10 = document.getElementById('m10');
+
+    const apilink = `http://exam-2020-1-api.std-900.ist.mospolytech.ru/api/data1/`;
+    const request = new XMLHttpRequest();
+    request.open('GET', apilink+`${target.id}`);
+
+    if (target.id != '') {
+        console.log(target.id);
+        request.onload = reqListener;
+        function reqListener () {
+            menu1.innerText = JSON.parse(request.response).set_1;
+            menu2.innerText = JSON.parse(request.response).set_2;
+            menu3.innerText = JSON.parse(request.response).set_3;
+            menu4.innerText = JSON.parse(request.response).set_4;
+            menu5.innerText = JSON.parse(request.response).set_5;
+            menu6.innerText = JSON.parse(request.response).set_6;
+            menu7.innerText = JSON.parse(request.response).set_7;
+            menu8.innerText = JSON.parse(request.response).set_8;
+            menu9.innerText = JSON.parse(request.response).set_9;
+            menu10.innerText = JSON.parse(request.response).set_10;
+          }
+        request.send();
+    }
+}
+
 window.onload = function () {
     const apilink = `http://exam-2020-1-api.std-900.ist.mospolytech.ru/api/data1`;
 
@@ -182,5 +220,8 @@ window.onload = function () {
         }), 0), 1000);
         request4.send();
     }
+
+    let tbl = document.getElementById('restTable');
+    tbl.onclick = clickHandler;
 
 }
