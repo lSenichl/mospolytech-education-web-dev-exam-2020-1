@@ -559,40 +559,40 @@
                         </div>
                         <div class="modal-body">
                             <div class="text-center">
-                                <h3 class="pb-2">Позиции заказа</h3>
-                                <div class="heading-line mx-auto"></div>
+                                <h3 class="pb-1">Позиции заказа</h3>
+                                <div class="heading-line mx-auto mb-3"></div>
                             </div>
                             <div class="text-center pt-2">
-                                <h3 class="pb-2">Дополнительные опции</h3>
-                                <div class="heading-line mx-auto"></div>
+                                <h3 class="pb-1">Дополнительные опции</h3>
+                                <div class="heading-line mx-auto mb-3"></div>
                             </div>
                             <div class="text-center pt-2">
-                                <h3 class="pb-2">Информация о предприятии</h3>
-                                <div class="heading-line mx-auto"></div>
+                                <h3 class="pb-1">Информация о предприятии</h3>
+                                <div class="heading-line mx-auto mb-3"></div>
                                 <div class="row text-left">
                                     <div class="col-md-6">Название</div>
-                                    <div class="col-md-6">Temp</div>
+                                    <div class="col-md-6" id="modalName">Temp</div>
                                 </div>
                                 <div class="row text-left">
                                     <div class="col-md-6">Административный округ</div>
-                                    <div class="col-md-6">Temp</div>
+                                    <div class="col-md-6" id="modalAdmArea">Temp</div>
                                 </div>
                                 <div class="row text-left">
                                     <div class="col-md-6">Район</div>
-                                    <div class="col-md-6">Temp</div>
+                                    <div class="col-md-6" id="modalDistrict">Temp</div>
                                 </div>
                                 <div class="row text-left">
                                     <div class="col-md-6">Адрес</div>
-                                    <div class="col-md-6">Temp</div>
+                                    <div class="col-md-6" id="modalAddress">Temp</div>
                                 </div>
                                 <div class="row text-left">
                                     <div class="col-md-6">Рейтинг</div>
-                                    <div class="col-md-6">Temp</div>
+                                    <div class="col-md-6" id="modalRate">Temp</div>
                                 </div>
                             </div>
                             <div class="text-center pt-2">
-                                <h3 class="pb-2">Доставка</h3>
-                                <div class="heading-line mx-auto"></div>
+                                <h3 class="pb-1">Доставка</h3>
+                                <div class="heading-line mx-auto mb-3"></div>
                                 <div class="row text-left">
                                     <div class="col-md-6">Зона доставки:</div>
                                     <div class="col-md-6">
@@ -619,19 +619,22 @@
                                 </div>
                             </div>
                             <div class="text-center pt-2">
-                                <h3 class="pb-2">Итого</h3>
-                                <div class="heading-line mx-auto"></div>
+                                <h3 class="pb-1">Итого</h3>
+                                <div class="heading-line mx-auto mb-3"></div>
                                 <h4><span id="finalModalPrice"></span> Р</h4>
                             </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
-                            <button type="button" class="btn btn-primary">Подтвердить</button>
+                            <button type="button" class="btn btn-primary" id="confirm" data-dismiss="modal">Подтвердить</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
 
     </section>
 

@@ -162,6 +162,12 @@ function clickHandler(event) {
     let menu9 = document.getElementById('m9');
     let menu10 = document.getElementById('m10');
 
+    let modalName = document.getElementById('modalName');
+    let modalAdmArea = document.getElementById('modalAdmArea');
+    let modalDistrict = document.getElementById('modalDistrict');
+    let modalAddress = document.getElementById('modalAddress');
+    let modalRate = document.getElementById('modalRate');
+
     const apilink = `http://exam-2020-1-api.std-900.ist.mospolytech.ru/api/data1/`;
     const request = new XMLHttpRequest();
     request.open('GET', apilink + `${target.id}`);
@@ -180,6 +186,12 @@ function clickHandler(event) {
             menu8.innerText = JSON.parse(request.response).set_8;
             menu9.innerText = JSON.parse(request.response).set_9;
             menu10.innerText = JSON.parse(request.response).set_10;
+
+            modalName.innerText = JSON.parse(request.response).name;
+            modalAdmArea.innerText = JSON.parse(request.response).admArea;
+            modalDistrict.innerText = JSON.parse(request.response).district;
+            modalAddress.innerText = JSON.parse(request.response).address;
+            modalRate.innerText = JSON.parse(request.response).rate;
         }
         request.send();
     }
