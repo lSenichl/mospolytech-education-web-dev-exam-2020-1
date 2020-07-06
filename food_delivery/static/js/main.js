@@ -77,7 +77,7 @@ function getTable(data, page) {
             }
         }
     }
-    
+
     console.log(data2);
     if (data2.length > 0) {
         var temp = "";
@@ -127,7 +127,9 @@ window.onload = function () {
     var rests = document.querySelector("#inputState");
     var rests_val = rests.options[rests.selectedIndex].value == "Есть" ? 1 : 0;
 
-    request4.onload = () => getTable(JSON.parse(request4.response).filter(elem => {
+    request4.onload = () => getTable(JSON.parse(request4.response).sort(function (obj1, obj2) {
+        return obj1.rate - obj2.rate;
+    }).filter(elem => {
         let result = true;
         if (area_val != "Не выбрано") {
             result *= (elem.admArea == area_val);
@@ -160,7 +162,9 @@ window.onload = function () {
         var rests = document.querySelector("#inputState");
         var rests_val = rests.options[rests.selectedIndex].value == "Есть" ? 1 : 0;
 
-        setTimeout(request4.onload = () => getTable(JSON.parse(request3.response).filter(elem => {
+        setTimeout(request4.onload = () => getTable(JSON.parse(request3.response).sort(function (obj1, obj2) {
+            return obj1.rate - obj2.rate;
+        }).filter(elem => {
             let result = true;
             if (area_val != "Не выбрано") {
                 result *= (elem.admArea == area_val);
