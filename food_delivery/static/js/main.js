@@ -60,25 +60,45 @@ function getTypeObject(data) {
     });
 }
 
-function getTable(data) {
+function getTable(data, page) {
     console.log(data);
-    if (data.length > 0) {
+    let data2 = [];
+    console.log(data.length);
+    if (data.length < 20) {
+        for (let index = 0; index < data.length; index++) {
+            data2[index] = data[index];
+        }
+    } else {
+        for (let index = page * 20; index < page * 20 + 20; index++) {
+            if (index > data.length) {
+                break
+            } else {
+                data2[index % 20] = data[index];
+            }
+        }
+    }
+    
+    console.log(data2);
+    if (data2.length > 0) {
         var temp = "";
 
-        data.forEach((u) => {
+        data2.forEach((u) => {
             temp += "<tr>";
             temp += "<td>" + u.name + "</td>";
             temp += "<td>" + u.typeObject + "</td>";
             temp += "<td>" + u.address + "</td>";
-            temp += `<td><button type=\"submit\" class=\"btn btn-primary\" id=\`${u.id}\`>Выбрать</button></td>`;
+            temp += "<td><button type=\"submit\" class=\"btn btn-primary\" id=";
+            temp += `${u.id}`
+            temp += ">Выбрать</button></td>"
         })
 
-        document.getElementById("data").innerHTML = temp;
+        document.getElementById("restTable").innerHTML = temp;
     }
 }
 
 window.onload = function () {
     const apilink = `http://exam-2020-1-api.std-900.ist.mospolytech.ru/api/data1`;
+
     const request = new XMLHttpRequest();
     const request2 = new XMLHttpRequest();
     const request3 = new XMLHttpRequest();
@@ -98,15 +118,64 @@ window.onload = function () {
     request3.onload = () => getTypeObject(JSON.parse(request3.response));
     request3.send();
 
-    request4.onload = () => getTable(JSON.parse(request4.response));
+    var area = document.querySelector("#inputAdmArea");
+    var area_val = area.options[area.selectedIndex].value;
+    var distr = document.querySelector("#inputDistrict");
+    var distr_val = distr.options[distr.selectedIndex].value;
+    var type = document.querySelector("#inputTypeObject");
+    var type_val = type.options[type.selectedIndex].value;
+    var rests = document.querySelector("#inputState");
+    var rests_val = rests.options[rests.selectedIndex].value == "Есть" ? 1 : 0;
+
+    request4.onload = () => getTable(JSON.parse(request4.response).filter(elem => {
+        let result = true;
+        if (area_val != "Не выбрано") {
+            result *= (elem.admArea == area_val);
+        }
+        if (distr_val != "Не выбрано") {
+            result *= (elem.district == distr_val);
+        }
+        if (type_val != "Не выбрано") {
+            result *= (elem.typeObject == type_val);
+        }
+        if (rests_val != "Не выбрано") {
+            result *= (elem.socialPrivileges == rests_val);
+        }
+        return result;
+    }), 0);
     request4.send();
 
     btnTable.onclick = function () {
-        document.getElementById("data").innerHTML = ''
+        document.getElementById("restTable").innerHTML = '';
         const apilink = `http://exam-2020-1-api.std-900.ist.mospolytech.ru/api/data1`;
         const request4 = new XMLHttpRequest();
         request4.open('GET', apilink);
-        setTimeout(request4.onload = () => getTable(JSON.parse(request3.response)), 1000);
+
+        var area = document.querySelector("#inputAdmArea");
+        var area_val = area.options[area.selectedIndex].value;
+        var distr = document.querySelector("#inputDistrict");
+        var distr_val = distr.options[distr.selectedIndex].value;
+        var type = document.querySelector("#inputTypeObject");
+        var type_val = type.options[type.selectedIndex].value;
+        var rests = document.querySelector("#inputState");
+        var rests_val = rests.options[rests.selectedIndex].value == "Есть" ? 1 : 0;
+
+        setTimeout(request4.onload = () => getTable(JSON.parse(request3.response).filter(elem => {
+            let result = true;
+            if (area_val != "Не выбрано") {
+                result *= (elem.admArea == area_val);
+            }
+            if (distr_val != "Не выбрано") {
+                result *= (elem.district == distr_val);
+            }
+            if (type_val != "Не выбрано") {
+                result *= (elem.typeObject == type_val);
+            }
+            if (rests_val != "Не выбрано") {
+                result *= (elem.socialPrivileges == rests_val);
+            }
+            return result;
+        }), 0), 1000);
         request4.send();
     }
 

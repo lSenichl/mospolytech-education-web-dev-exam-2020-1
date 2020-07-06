@@ -198,14 +198,14 @@
                     <label for="inputState">Соц. скидки</label>
                     <select id="inputState" class="form-control">
                         <option selected>Не выбрано</option>
-                        <option value="yes">Есть</option>
-                        <option value="no">Нет</option>
+                        <option value="Есть">Есть</option>
+                        <option value="Нет">Нет</option>
                     </select>
                 </div>
             </div>
         </form>
 
-        <button class="btn btn-primary" id="btnTable">Найти</button>
+        <button class="btn btn-primary col-md-7" id="btnTable">Найти</button>
 
         <div class="container pt-3">
             <table class="table">
@@ -217,9 +217,7 @@
                         <th>Действие</th>
                     </tr>
                 </thead>
-                <tbody id="data">
-
-                </tbody>
+                <tbody id="restTable"></tbody>
             </table>
         </div>
 
@@ -576,8 +574,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
-
 </body>
 
 </html>
