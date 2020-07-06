@@ -34,3 +34,14 @@ body {
 .modal-dialog {
     background-color: #d9ebe9;
 }
+
+footer {
+    background-color: #44535e;
+    color: #d9ebe9;
+}
+
+.nav-link {
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+}
