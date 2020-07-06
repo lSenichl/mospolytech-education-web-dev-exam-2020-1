@@ -259,7 +259,7 @@ function getTable(data, page) {
             temp += "<td>" + u.name + "</td>";
             temp += "<td>" + u.typeObject + "</td>";
             temp += "<td>" + u.address + "</td>";
-            temp += "<td><button type=\"submit\" class=\"btn btn-primary\" id=";
+            temp += "<td><button type=\"submit\" class=\"btn btn-dark\" id=";
             temp += `${u.id}`
             temp += ">Выбрать</button></td>"
         })

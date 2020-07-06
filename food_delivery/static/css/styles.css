@@ -1,10 +1,36 @@
 body {
     font-family: 'Exo 2', regular;
     color: black;
-    background-color: white;
+    background-color: #d9ebe9;
+}
+
+.navbar {
+    background-color: #44535e;
+}
+
+.card {
+    background-color: #44535e;
+    border-color: black;
+    color: #d9ebe9;
+}
+
+.form-control {
+    
+    border-color: black;
+    color: black;
+}
+
+.btn {
+    background-color: #44535e;
+    border-color: black;
+    color: white;
 }
 
 .heading-line {
     background-color: black;
     height: 5px;
+}
+
+.modal-dialog {
+    background-color: #d9ebe9;
 }
