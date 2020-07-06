@@ -312,7 +312,7 @@ function clickHandler(event) {
             modalAdmArea.innerText = JSON.parse(request.response).admArea;
             modalDistrict.innerText = JSON.parse(request.response).district;
             modalAddress.innerText = JSON.parse(request.response).address;
-            modalRate.innerText = JSON.parse(request.response).rate;
+            modalRate.innerText = ((JSON.parse(request.response).rate)/20).toFixed(1);
         }
         request.send();
 
