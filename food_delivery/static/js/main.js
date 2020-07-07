@@ -190,10 +190,12 @@ $(document).on('click', '.number-spinner button', function () {
 function getAdmArea(data) {
     let tempArr = [];
     let selectId = document.getElementById("inputAdmArea");
+
     data.forEach(elem => {
         if (elem.admArea) {
             if (!tempArr.includes(elem.admArea)) {
                 let createOption = document.createElement("option");
+
                 createOption.innerHTML = elem.admArea;
                 selectId.appendChild(createOption);
                 tempArr.push(elem.admArea);
@@ -205,10 +207,12 @@ function getAdmArea(data) {
 function getDistrict(data) {
     let tempArr = [];
     let selectId = document.getElementById("inputDistrict");
+
     data.forEach(elem => {
         if (elem.district) {
             if (!tempArr.includes(elem.district)) {
                 let createOption = document.createElement("option");
+
                 createOption.innerHTML = elem.district;
                 selectId.appendChild(createOption);
                 tempArr.push(elem.district);
@@ -220,10 +224,12 @@ function getDistrict(data) {
 function getTypeObject(data) {
     let tempArr = [];
     let selectId = document.getElementById("inputTypeObject");
+
     data.forEach(elem => {
         if (elem.typeObject) {
             if (!tempArr.includes(elem.typeObject)) {
                 let createOption = document.createElement("option");
+
                 createOption.innerHTML = elem.typeObject;
                 selectId.appendChild(createOption);
                 tempArr.push(elem.typeObject);
@@ -234,7 +240,9 @@ function getTypeObject(data) {
 
 function getTable(data, page) {
     console.log(data);
+
     let data2 = [];
+
     console.log(data.length);
     if (data.length < 20) {
         for (let index = 0; index < data.length; index++) {
@@ -470,5 +478,4 @@ window.onload = function () {
 
     let tbl = document.getElementById('restTable');
     tbl.onclick = clickHandler;
-
 }
