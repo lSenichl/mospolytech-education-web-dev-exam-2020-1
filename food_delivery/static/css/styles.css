@@ -37,7 +37,8 @@ body {
 
 footer {
     background-color: #44535e;
-    color: #d9ebe9;
+    color: black;
+    border-color: black;
 }
 
 .nav-link {

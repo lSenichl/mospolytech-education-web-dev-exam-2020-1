@@ -20,6 +20,183 @@
 </head>
 
 <body>
+    <section>
+        <nav class="navbar navbar-expand-lg pb-3">
+            <div class="container">
+                <a class="navbar-brand w-25" href="#">
+                    <img class="img-fluid w-25" src="static/img/logo.png">
+                </a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                    data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="fa fa-bars"></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
+                    <ul class="navbar-nav mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <h3>Административная панель</h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="heading-line mx-auto"></div>
+    </section>
+
+    <section id="aboutLink" class="container">
+        <div class="text-center py-5">
+            <h2 class="pb-3">Предприятия общественного питания города Москвы</h2>
+            <div class="heading-line mx-auto"></div>
+        </div>
+    </section>
+
+    <section class="row justify-content-center mx-0">
+        <form class="col-md-7">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="exampleInputEmail1">Наименование</label>
+                    <input type="email" class="form-control" id="inputName" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputAdmArea">Административный округ</label>
+                    <select id="inputAdmArea" class="form-control">
+                        <option selected>Не выбрано</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="exampleInputEmail1">Количество посадочных мест</label>
+                    <div class="row">
+                        <div class="input-group mb-2 col-md-6">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">От</div>
+                            </div>
+                            <input type="text" class="form-control" id="inlineFormInputGroupUsername2"
+                                placeholder="">
+                        </div>
+                        <div class="input-group mb-2 col-md-6">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">До</div>
+                            </div>
+                            <input type="text" class="form-control" id="inlineFormInputGroupUsername2"
+                                placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputState">Является сетевым</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Не выбрано</option>
+                        <option value="Нет">Да</option>
+                        <option value="Есть">Нет</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputDistrict">Район</label>
+                    <select id="inputDistrict" class="form-control">
+                        <option selected>Не выбрано</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="exampleInputEmail1">Дата создания</label>
+                    <div class="row">
+                        <div class="input-group mb-2 col-md-6">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">С</div>
+                            </div>
+                            <input type="text" class="form-control" id="inlineFormInputGroupUsername2"
+                                placeholder="">
+                        </div>
+                        <div class="input-group mb-2 col-md-6">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">По</div>
+                            </div>
+                            <input type="text" class="form-control" id="inlineFormInputGroupUsername2"
+                                placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputState">Льготы</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Не выбрано</option>
+                        <option value="Нет">Нет</option>
+                        <option value="Есть">Есть</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputTypeObject">Тип</label>
+                    <select id="inputTypeObject" class="form-control">
+                        <option selected>Не выбрано</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+
+        <div class="row col-md-12 justify-content-center">
+            <button class="btn btn-dark col-md-3" id="btnTable">Найти</button>
+        </div>
+
+        <div class="container pt-5 row w-100">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Название</th>
+                        <th>Тип</th>
+                        <th>Адрес</th>
+                        <th>Действие</th>
+                    </tr>
+                </thead>
+                <tbody id="restTable"></tbody>
+            </table>
+        </div>
+
+        <div class="col-md-6 pt-5">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-end pr-5 my-auto">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Предыдущая</a>
+                    </li>
+                    <li class="page-item disabled"><a class="page-link" href="#" aria-disabled="true">1</a></li>
+                    <li class="page-item disabled"><a class="page-link" href="#" aria-disabled="true">2</a></li>
+                    <li class="page-item disabled"><a class="page-link" href="#" aria-disabled="true">3</a></li>
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" aria-disabled="true">Следующая</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row col-md-6 justify-content-start pl-5 pt-5">
+            <button class="btn btn-dark col-md-3" id="btnTable">Добавить предприятие</button>
+        </div>
+    </section>
+
+    <footer class="footer mt-5">
+        <div class="heading-line mx-auto"></div>
+        <div class="text-center">
+            <a href="#">
+                <img src="" alt="">
+            </a>
+        </div>
+        <div class="container mb-1">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 text-center">
+                    <p>
+                        Департамент торговли и услуг города Москвы
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="copyright text-center py-2 border-top text-muted">
+            <p> &copy; 2020 Все права защищены.</p>
+        </div>
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

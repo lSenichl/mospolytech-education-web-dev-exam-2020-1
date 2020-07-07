@@ -1,5 +1,53 @@
 body {
     font-family: 'Exo 2', regular;
+    color: black;
+    background-color: #d9ebe9;
+}
+
+.navbar {
+    background-color: #44535e;
+}
+
+.card {
+    background-color: #44535e;
+    border-color: black;
+    color: #d9ebe9;
+}
+
+.form-control {
+    
+    border-color: black;
+    color: black;
+}
+
+.btn {
+    background-color: #44535e;
+    border-color: black;
     color: white;
-    background-color: white;
+}
+
+.heading-line {
+    background-color: black;
+    height: 5px;
+}
+
+.modal-dialog {
+    background-color: #d9ebe9;
+}
+
+footer {
+    background-color: #44535e;
+    color: black;
+    border-color: black;
+}
+
+.nav-link {
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.card img {
+    height: 300px;
+    max-height: 300px;
 }
