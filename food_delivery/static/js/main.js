@@ -1,6 +1,6 @@
 $(document).on('click', '.number-spinner button', function () {
 
-    var btn = $(this),
+    let btn = $(this),
         oldValue = btn.closest('.number-spinner').find('input').val().trim(),
         newVal = 0;
 
@@ -80,7 +80,7 @@ $(document).on('click', '.number-spinner button', function () {
     document.getElementById("t10").innerHTML = '';
 
     if (priceArr[0] != 0) {
-        var temp = "";
+        let temp = "";
 
         temp += "<td style=\"width: 25%\">" + "<img src=\"static/img/b87bb973.jpg\" class=\"img-fluid\">" + "</td>";
         temp += "<td style=\"width: 25%\">" + "<strong>Плов</strong>" + "</td>";
@@ -90,7 +90,7 @@ $(document).on('click', '.number-spinner button', function () {
         document.getElementById("t1").innerHTML = temp;
     }
     if (priceArr[1] != 0) {
-        var temp2 = "";
+        let temp2 = "";
 
         temp2 += "<td style=\"width: 25%\">" + "<img src=\"static/img/samii_vkusnii_borsh-404089.jpg\" class=\"img-fluid\">" + "</td>";
         temp2 += "<td style=\"width: 25%\">" + "<strong>Борщ</strong>" + "</td>";
@@ -100,7 +100,7 @@ $(document).on('click', '.number-spinner button', function () {
         document.getElementById("t2").innerHTML = temp2;
     }
     if (priceArr[2] != 0) {
-        var temp3 = "";
+        let temp3 = "";
 
         temp3 += "<td style=\"width: 25%\">" + "<img src=\"static/img/draniki-iz-kartoshki-foto-1-570x368.jpg\" class=\"img-fluid\">" + "</td>";
         temp3 += "<td style=\"width: 25%\">" + "<strong>Драники</strong>" + "</td>";
@@ -110,7 +110,7 @@ $(document).on('click', '.number-spinner button', function () {
         document.getElementById("t3").innerHTML = temp3;
     }
     if (priceArr[3] != 0) {
-        var temp4 = "";
+        let temp4 = "";
 
         temp4 += "<td style=\"width: 25%\">" + "<img src=\"static/img/Pasta_1523360590.jpg\" class=\"img-fluid\">" + "</td>";
         temp4 += "<td style=\"width: 25%\">" + "<strong>Паста</strong>" + "</td>";
@@ -121,7 +121,7 @@ $(document).on('click', '.number-spinner button', function () {
         document.getElementById("t4").innerHTML = temp4;
     }
     if (priceArr[4] != 0) {
-        var temp5 = "";
+        let temp5 = "";
 
         temp5 += "<td style=\"width: 25%\">" + "<img src=\"static/img/300x233_0_f907946fe6809e00caed3d759703d609@2000x1500_0xc0a839a2_7163011741494799525.jpeg\" class=\"img-fluid\">" + "</td>";
         temp5 += "<td style=\"width: 25%\">" + "<strong>Бефстроганов</strong>" + "</td>";
@@ -132,7 +132,7 @@ $(document).on('click', '.number-spinner button', function () {
         document.getElementById("t5").innerHTML = temp5;
     }
     if (priceArr[5] != 0) {
-        var temp6 = "";
+        let temp6 = "";
 
         temp6 += "<td style=\"width: 25%\">" + "<img src=\"static/img/hachapuri-1.jpg\" class=\"img-fluid\">" + "</td>";
         temp6 += "<td style=\"width: 25%\">" + "<strong>Хачапури</strong>" + "</td>";
@@ -143,7 +143,7 @@ $(document).on('click', '.number-spinner button', function () {
         document.getElementById("t6").innerHTML = temp6;
     }
     if (priceArr[6] != 0) {
-        var temp7 = "";
+        let temp7 = "";
 
         temp7 += "<td style=\"width: 25%\">" + "<img src=\"static/img/primebeefdenversteak_500_306_5_100.png\" class=\"img-fluid\">" + "</td>";
         temp7 += "<td style=\"width: 25%\">" + "<strong>Стейк</strong>" + "</td>";
@@ -154,7 +154,7 @@ $(document).on('click', '.number-spinner button', function () {
         document.getElementById("t7").innerHTML = temp7;
     }
     if (priceArr[7] != 0) {
-        var temp8 = "";
+        let temp8 = "";
 
         temp8 += "<td style=\"width: 25%\">" + "<img src=\"static/img/fila_new.jpg\" class=\"img-fluid\">" + "</td>";
         temp8 += "<td style=\"width: 25%\">" + "<strong>Филадельфия</strong>" + "</td>";
@@ -165,7 +165,7 @@ $(document).on('click', '.number-spinner button', function () {
         document.getElementById("t8").innerHTML = temp8;
     }
     if (priceArr[8] != 0) {
-        var temp9 = "";
+        let temp9 = "";
 
         temp9 += "<td style=\"width: 25%\">" + "<img src=\"static/img/300x233_0_86f0e15b2ff49738d2d1e237fd2e049b@2123x1412_0xc0a839a2_7142987081498078867.jpeg\" class=\"img-fluid\">" + "</td>";
         temp9 += "<td style=\"width: 25%\">" + "<strong>Омлет</strong>" + "</td>";
@@ -175,7 +175,7 @@ $(document).on('click', '.number-spinner button', function () {
         document.getElementById("t9").innerHTML = temp9;
     }
     if (priceArr[9] != 0) {
-        var temp10 = "";
+        let temp10 = "";
 
         temp10 += "<td style=\"width: 25%\">" + "<img src=\"static/img/unnamed.jpg\" class=\"img-fluid\">" + "</td>";
         temp10 += "<td style=\"width: 25%\">" + "<strong>Шашлык</strong>" + "</td>";
@@ -189,11 +189,11 @@ $(document).on('click', '.number-spinner button', function () {
 
 function getAdmArea(data) {
     let tempArr = [];
-    var selectId = document.getElementById("inputAdmArea");
+    let selectId = document.getElementById("inputAdmArea");
     data.forEach(elem => {
         if (elem.admArea) {
             if (!tempArr.includes(elem.admArea)) {
-                var createOption = document.createElement("option");
+                let createOption = document.createElement("option");
                 createOption.innerHTML = elem.admArea;
                 selectId.appendChild(createOption);
                 tempArr.push(elem.admArea);
@@ -204,11 +204,11 @@ function getAdmArea(data) {
 
 function getDistrict(data) {
     let tempArr = [];
-    var selectId = document.getElementById("inputDistrict");
+    let selectId = document.getElementById("inputDistrict");
     data.forEach(elem => {
         if (elem.district) {
             if (!tempArr.includes(elem.district)) {
-                var createOption = document.createElement("option");
+                let createOption = document.createElement("option");
                 createOption.innerHTML = elem.district;
                 selectId.appendChild(createOption);
                 tempArr.push(elem.district);
@@ -219,11 +219,11 @@ function getDistrict(data) {
 
 function getTypeObject(data) {
     let tempArr = [];
-    var selectId = document.getElementById("inputTypeObject");
+    let selectId = document.getElementById("inputTypeObject");
     data.forEach(elem => {
         if (elem.typeObject) {
             if (!tempArr.includes(elem.typeObject)) {
-                var createOption = document.createElement("option");
+                let createOption = document.createElement("option");
                 createOption.innerHTML = elem.typeObject;
                 selectId.appendChild(createOption);
                 tempArr.push(elem.typeObject);
@@ -252,7 +252,7 @@ function getTable(data, page) {
 
     console.log(data2);
     if (data2.length > 0) {
-        var temp = "";
+        let temp = "";
 
         data2.forEach((u) => {
             temp += "<tr>";
@@ -345,14 +345,14 @@ window.onload = function () {
     request3.onload = () => getTypeObject(JSON.parse(request3.response));
     request3.send();
 
-    var area = document.querySelector("#inputAdmArea");
-    var area_val = area.options[area.selectedIndex].value;
-    var distr = document.querySelector("#inputDistrict");
-    var distr_val = distr.options[distr.selectedIndex].value;
-    var type = document.querySelector("#inputTypeObject");
-    var type_val = type.options[type.selectedIndex].value;
-    var rests = document.querySelector("#inputState");
-    var rests_val = rests.options[rests.selectedIndex].value == "Есть" ? 1 : 0;
+    let area = document.querySelector("#inputAdmArea");
+    let area_val = area.options[area.selectedIndex].value;
+    let distr = document.querySelector("#inputDistrict");
+    let distr_val = distr.options[distr.selectedIndex].value;
+    let type = document.querySelector("#inputTypeObject");
+    let type_val = type.options[type.selectedIndex].value;
+    let rests = document.querySelector("#inputState");
+    let rests_val = rests.options[rests.selectedIndex].value == "Есть" ? 1 : 0;
 
     request4.onload = () => getTable(JSON.parse(request4.response).sort(function (obj1, obj2) {
         return obj2.rate - obj1.rate;
@@ -380,14 +380,14 @@ window.onload = function () {
         const request4 = new XMLHttpRequest();
         request4.open('GET', apilink);
 
-        var area = document.querySelector("#inputAdmArea");
-        var area_val = area.options[area.selectedIndex].value;
-        var distr = document.querySelector("#inputDistrict");
-        var distr_val = distr.options[distr.selectedIndex].value;
-        var type = document.querySelector("#inputTypeObject");
-        var type_val = type.options[type.selectedIndex].value;
-        var rests = document.querySelector("#inputState");
-        var rests_val = rests.options[rests.selectedIndex].value == "Есть" ? 1 : 0;
+        let area = document.querySelector("#inputAdmArea");
+        let area_val = area.options[area.selectedIndex].value;
+        let distr = document.querySelector("#inputDistrict");
+        let distr_val = distr.options[distr.selectedIndex].value;
+        let type = document.querySelector("#inputTypeObject");
+        let type_val = type.options[type.selectedIndex].value;
+        let rests = document.querySelector("#inputState");
+        let rests_val = rests.options[rests.selectedIndex].value == "Есть" ? 1 : 0;
 
         setTimeout(request4.onload = () => getTable(JSON.parse(request3.response).sort(function (obj1, obj2) {
             return obj2.rate - obj1.rate;
@@ -414,7 +414,7 @@ window.onload = function () {
         if ($(this).is(':checked')) {
             let finalMosalPrice = document.getElementById('finalModalPrice');
             finalMosalPrice.innerText = Math.round(finPr * 1.4);
-            var tempo1 = "";
+            let tempo1 = "";
 
             tempo1 += "<td style=\"width: 50%\">" + "<strong>В два раза больше:</strong>" + "</td>";
             tempo1 += "<td style=\"width: 50%\">" + "Сеты X2, Цена -60%" + "</td>";
@@ -429,7 +429,7 @@ window.onload = function () {
 
     $('#defaultCheck2').on('click', function () {
         if ($(this).is(':checked')) {
-            var tempo2 = "";
+            let tempo2 = "";
 
             let finalMosalPrice = document.getElementById('finalModalPrice');
             tempo2 += "<td style=\"width: 50%\">" + "<strong>Только горячим:</strong>" + "</td>";
