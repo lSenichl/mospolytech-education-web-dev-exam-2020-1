@@ -92,6 +92,18 @@ window.onload = function () {
     request3.open('GET', apilink);
     request4.open('GET', apilink);
 
+    let areahtml = document.querySelector("#inputAdmArea");
+    let areajs = areahtml.options[areahtml.selectedIndex].value;
+
+    let distrhtml = document.querySelector("#inputDistrict");
+    let distrjs = distrhtml.options[distrhtml.selectedIndex].value;
+
+    let typehtml = document.querySelector("#inputTypeObject");
+    let typejs = typehtml.options[typehtml.selectedIndex].value;
+
+    let restshtml = document.querySelector("#inputState");
+    let restsjs = restshtml.options[restshtml.selectedIndex].value == "Есть" ? 1 : 0;
+
     request.onload = () => getDistrict(JSON.parse(request.response));
     request.send();
 
@@ -101,31 +113,27 @@ window.onload = function () {
     request3.onload = () => getTypeObject(JSON.parse(request3.response));
     request3.send();
 
-    let area = document.querySelector("#inputAdmArea");
-    let area_val = area.options[area.selectedIndex].value;
-    let distr = document.querySelector("#inputDistrict");
-    let distr_val = distr.options[distr.selectedIndex].value;
-    let type = document.querySelector("#inputTypeObject");
-    let type_val = type.options[type.selectedIndex].value;
-    let rests = document.querySelector("#inputState");
-    let rests_val = rests.options[rests.selectedIndex].value == "Есть" ? 1 : 0;
-
     request4.onload = () => getTable(JSON.parse(request4.response).sort(function (obj1, obj2) {
         return obj2.rate - obj1.rate;
     }).filter(elem => {
         let result = true;
-        if (area_val != "Не выбрано") {
-            result *= (elem.admArea == area_val);
+
+        if (areajs != "Не выбрано") {
+            result *= (elem.admArea == areajs);
         }
-        if (distr_val != "Не выбрано") {
-            result *= (elem.district == distr_val);
+
+        if (distrjs != "Не выбрано") {
+            result *= (elem.district == distrjs);
         }
-        if (type_val != "Не выбрано") {
-            result *= (elem.typeObject == type_val);
+
+        if (typejs != "Не выбрано") {
+            result *= (elem.typeObject == typejs);
         }
-        if (rests_val != "Не выбрано") {
-            result *= (elem.socialPrivileges == rests_val);
+
+        if (restsjs != "Не выбрано") {
+            result *= (elem.socialPrivileges == restsjs);
         }
+
         return result;
     }), 0);
     request4.send();
@@ -136,31 +144,39 @@ window.onload = function () {
         const request4 = new XMLHttpRequest();
         request4.open('GET', apilink);
 
-        let area = document.querySelector("#inputAdmArea");
-        let area_val = area.options[area.selectedIndex].value;
-        let distr = document.querySelector("#inputDistrict");
-        let distr_val = distr.options[distr.selectedIndex].value;
-        let type = document.querySelector("#inputTypeObject");
-        let type_val = type.options[type.selectedIndex].value;
-        let rests = document.querySelector("#inputState");
-        let rests_val = rests.options[rests.selectedIndex].value == "Есть" ? 1 : 0;
+        let areahtml = document.querySelector("#inputAdmArea");
+        let areajs = areahtml.options[areahtml.selectedIndex].value;
+
+        let distrhtml = document.querySelector("#inputDistrict");
+        let distrjs = distrhtml.options[distrhtml.selectedIndex].value;
+
+        let typehtml = document.querySelector("#inputTypeObject");
+        let typejs = typehtml.options[typehtml.selectedIndex].value;
+
+        let restshtml = document.querySelector("#inputState");
+        let restsjs = restshtml.options[restshtml.selectedIndex].value == "Есть" ? 1 : 0;
 
         setTimeout(request4.onload = () => getTable(JSON.parse(request3.response).sort(function (obj1, obj2) {
             return obj2.rate - obj1.rate;
         }).filter(elem => {
             let result = true;
-            if (area_val != "Не выбрано") {
-                result *= (elem.admArea == area_val);
+
+            if (areajs != "Не выбрано") {
+                result *= (elem.admArea == areajs);
             }
-            if (distr_val != "Не выбрано") {
-                result *= (elem.district == distr_val);
+
+            if (distrjs != "Не выбрано") {
+                result *= (elem.district == distrjs);
             }
-            if (type_val != "Не выбрано") {
-                result *= (elem.typeObject == type_val);
+
+            if (typejs != "Не выбрано") {
+                result *= (elem.typeObject == typejs);
             }
-            if (rests_val != "Не выбрано") {
-                result *= (elem.socialPrivileges == rests_val);
+
+            if (restsjs != "Не выбрано") {
+                result *= (elem.socialPrivileges == restsjs);
             }
+
             return result;
         }), 0), 1000);
         request4.send();
